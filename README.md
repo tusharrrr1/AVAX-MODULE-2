@@ -19,7 +19,6 @@ The project consists of the following files:
 - `AnasCalculator.sol`: The Solidity smart contract containing the mathematical operations.
 - `index.html`: The HTML file of the frontend application to display the results.
 - `app.js`: The JavaScript file to interact with the deployed smart contract and update the UI with the function results.
-- `styles.css`: The CSS file to style the frontend application.
 
 ## How to Run the Project
 1. Deploy the "AnasCalculator" smart contract on a local or testnet Ethereum network.
