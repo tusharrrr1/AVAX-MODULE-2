@@ -1,68 +1,35 @@
-# UmarContract DApp
+# Function Frontend - Smart Contract Management
 
-This project is a decentralized application (DApp) that interacts with the UmarContract smart contract. The DApp allows you to view the owner's name and balance, as well as transfer ethers to the contract owner.
+## Project Overview
+The "Function Frontend" project aims to demonstrate the interaction between a simple smart contract and a frontend application. The smart contract, named "AnasCalculator," includes several functions for basic mathematical operations. The project focuses on displaying the values of these functions on the frontend of the application.
 
-## Description
+## Smart Contract - AnasCalculator.sol
+The smart contract "AnasCalculator" is a simple Solidity contract that includes the following functions:
+1. `constructor`: Initializes the contract and sets the owner's name and address during deployment.
+2. `add`: Performs addition of two integers and emits the result using the `AdditionResult` event.
+3. `subtract`: Performs subtraction of two integers and emits the result using the `SubtractionResult` event.
+4. `multiply`: Performs multiplication of two integers and emits the result using the `MultiplicationResult` event.
+5. `divide`: Performs division of two integers, checks for division by zero, and emits the result using the `DivisionResult` event.
 
-The UmarContract DApp is built using Hardhat and React. It consists of a smart contract written in Solidity and a React frontend that provides a user-friendly interface to interact with the contract. The smart contract handles the logic for retrieving the owner's name and balance, as well as transferring ethers to the owner. The React frontend displays the owner's information and provides a form to initiate a transfer.
+## Frontend Application
+The frontend application interacts with the deployed "AnasCalculator" smart contract to display the results of the mathematical operations. The application showcases the values returned by the functions on the user interface.
 
-## Getting Started
+## Project Structure
+The project consists of the following files:
+- `AnasCalculator.sol`: The Solidity smart contract containing the mathematical operations.
+- `index.html`: The HTML file of the frontend application to display the results.
+- `app.js`: The JavaScript file to interact with the deployed smart contract and update the UI with the function results.
+- `styles.css`: The CSS file to style the frontend application.
 
-### Installing
+## How to Run the Project
+1. Deploy the "AnasCalculator" smart contract on a local or testnet Ethereum network.
+2. Obtain the address of the deployed contract and set it in the `app.js` file.
+3. Deploy the frontend application on a web server or open the `index.html` file in a web browser.
+4. Interact with the frontend UI to trigger the mathematical functions on the smart contract.
+5. The results of the functions will be displayed on the frontend application.
 
-To download the project, you can clone the repository using the following command:
-
-```
-git clone https://github.com/UmarKhan19/Eth-Proof-Intermediate-Module-2
-```
-
-After cloning the repository, navigate to the project's root directory.
-
-### Executing program
-
-To run the DApp, follow these steps:
-
-1. Install the project dependencies by running the following command:
-
-   ```
-   npm install
-   ```
-2. Start a blockchain locally by running the command: 
-   ```
-   npx hardhat node
-   ```
-
-3. Deploy the UmarContract smart contract by running the deployment script:
-
-   ```
-   npx hardhat run scripts/deploy.js --network localhost
-   ```
-4. Go to frontend directory by running the command:
-
-   ```
-   cd ./frontend
-   ```
-5. Install the project dependencies by running the following command:
-
-   ```
-   npm install
-   ```
-6. Start the React development server:
-
-   ```
-   npm start
-   ```
-
-   The DApp will be accessible in your web browser at `http://localhost:3000`.
-
-## Help
-
-If you encounter any issues or have any questions, you can refer to the project's documentation or seek help from the project contributors.
-
-## Authors
-
-- [Umar Khan](https://github.com/UmarKhan19)
+## Conclusion
+The "Function Frontend" project successfully demonstrates the interaction between a simple smart contract and a frontend application. By executing mathematical operations on the smart contract and displaying the results on the frontend, the project showcases the capabilities of integrating blockchain functionality with user-friendly interfaces.
 
 ## License
-
-This code is released under the MIT License. Feel free to use, modify, and distribute it as per the terms of the license.
+[MIT](LICENSE)
