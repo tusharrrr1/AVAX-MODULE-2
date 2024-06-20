@@ -9,7 +9,7 @@ async function main() {
     to: receiver,
     value: ethers.parseEther("1.0"),
   });
- console.log(`Transaction hash: ${txn.hash}`);
+  console.log(`Transaction hash: ${txn.hash}`);
   txn.wait();
 
   console.log(`Transferred 1.0 ETH to ${receiver}`);

@@ -15,22 +15,22 @@ contract AnasCalculator {
     event MultiplicationResult(int256 result);
     event DivisionResult(int256 result);
 
-    function add(int256 a, int256 b) public payable {
+    function add(int256 a, int256 b) public {
         int256 result = a + b;
         emit AdditionResult(result);
     }
 
-    function subtract(int256 a, int256 b) public payable {
+    function subtract(int256 a, int256 b) public {
         int256 result = a - b;
         emit SubtractionResult(result);
     }
 
-    function multiply(int256 a, int256 b) public payable {
+    function multiply(int256 a, int256 b) public {
         int256 result = a * b;
         emit MultiplicationResult(result);
     }
 
-    function divide(int256 a, int256 b) public payable {
+    function divide(int256 a, int256 b) public {
         require(b != 0, "Cannot divide by zero");
         int256 result = a / b;
         emit DivisionResult(result);
