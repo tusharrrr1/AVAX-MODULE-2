@@ -60,7 +60,7 @@ function App() {
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
         const resultTx = await contract.add(num1, num2, {
-          value: ethers.utils.parseEther("1"),
+          value: "0",
         });
 
         setResult("Transaction sent. Waiting for confirmation...");
@@ -89,7 +89,7 @@ function App() {
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
         const resultTx = await contract.subtract(num1, num2, {
-          value: ethers.utils.parseEther("1"),
+          value: "0",
         });
 
         setResult("Transaction sent. Waiting for confirmation...");
@@ -118,7 +118,7 @@ function App() {
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
         const resultTx = await contract.multiply(num1, num2, {
-          value: ethers.utils.parseEther("1"),
+          value: "0",
         });
 
         setResult("Transaction sent. Waiting for confirmation...");
@@ -147,7 +147,7 @@ function App() {
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
         const resultTx = await contract.divide(num1, num2, {
-          value: ethers.utils.parseEther("1"),
+          value: "0",
         });
 
         setResult("Transaction sent. Waiting for confirmation...");

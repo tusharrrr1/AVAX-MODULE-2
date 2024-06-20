@@ -6,9 +6,11 @@ async function main() {
   console.log("Deploying contracts with the account:", deployer.address);
 
   const AnasCalculator = await ethers.getContractFactory("AnasCalculator");
-  const anasCalculator = await AnasCalculator.deploy("Anas");
+  const anasCalculator = await AnasCalculator.deploy("Tushar");
 
-  console.log("AnasCalculator address:", anasCalculator.target);
+  await anasCalculator.waitForDeployment()
+
+  console.log("AnasCalculator address:", await anasCalculator.getAddress());
 }
 
 main()
