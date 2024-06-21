@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 
 // Import the contract ABI and address
 import CalculatorJSON from "./contracts/AnasCalculator.sol/AnasCalculator.json";
-const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Replace with the actual contract address
+const contractAddress = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"; // Replace with the actual contract address
 
 const CalculatorABI = CalculatorJSON.abi;
 
@@ -59,7 +59,9 @@ function App() {
       if (contract && window.ethereum) {
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
-        const resultTx = await contract.add(num1, num2);
+        const resultTx = await contract.add(num1, num2, {
+          value: "0",
+        });
 
         setResult("Transaction sent. Waiting for confirmation...");
 
@@ -86,7 +88,9 @@ function App() {
       if (contract && window.ethereum) {
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
-        const resultTx = await contract.subtract(num1, num2);
+        const resultTx = await contract.subtract(num1, num2, {
+          value: "0",
+        });
 
         setResult("Transaction sent. Waiting for confirmation...");
 
@@ -113,7 +117,9 @@ function App() {
       if (contract && window.ethereum) {
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
-        const resultTx = await contract.multiply(num1, num2);
+        const resultTx = await contract.multiply(num1, num2, {
+          value: "0",
+        });
 
         setResult("Transaction sent. Waiting for confirmation...");
 
@@ -140,7 +146,9 @@ function App() {
       if (contract && window.ethereum) {
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
-        const resultTx = await contract.divide(num1, num2);
+        const resultTx = await contract.divide(num1, num2, {
+          value: "0",
+        });
 
         setResult("Transaction sent. Waiting for confirmation...");
 
